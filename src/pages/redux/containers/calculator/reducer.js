@@ -14,8 +14,9 @@ const initialState = {
 const defaultAction = { type: 'doNothing' };
 const reg = /\+|-|×|÷|%|\.|AC/;
 
-
-
+/**
+ * 计算器reducer
+ */
 export default function index(state = initialState, action = defaultAction) {
     const { textBox, perKey } = state;
     const { payload } = action;
