@@ -22,11 +22,10 @@ export default class History extends Component {
 
     // 查询历史
     getData = () => {
-        fetch('http://localhost:8080/Calcu/getData.php', {
-            method: 'get',
-        }).then(res => res.json()).then((res) => {
-            this.setState({ data: res });
-        });
+        fetch('http://localhost:8080/Calcu/getData.php', { method: 'get' })
+            .then(res => res.json()).then((res) => {
+                this.setState({ data: res });
+            });
     };
 
     /**
