@@ -1,38 +1,26 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
+import { getData } from './action';
 
 /**
  * 历史记录组件
  */
-export default class History extends Component {
-    /**
-     * constructor
-     */
-    constructor(props) {
-        super(props);
-        this.state = { data: [] };
-    }
+class History extends Component {
 
     /**
      * 组件挂载完成时请求数据
      */
     componentDidMount() {
-        this.getData();
+        const { getData } = this.props;
+        getData();
     }
-
-    // 查询历史
-    getData = () => {
-        fetch('http://localhost:8080/Calcu/getData.php', { method: 'get' })
-            .then(res => res.json()).then((res) => {
-                this.setState({ data: res });
-            });
-    };
 
     /**
      * 体部内容组件
      */
     render() {
-        const { data } = this.state;
+        const { data } = this.props;
         return (
             <div className="history">
                 <table>
@@ -57,3 +45,7 @@ export default class History extends Component {
         );
     }
 }
+export default connect(
+    state => state.Log,
+    { getData },
+)(History);
