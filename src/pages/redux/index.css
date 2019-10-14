@@ -1,0 +1,302 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  cursor: pointer; }
+
+.container {
+  width: 1920px; }
+  .container .header {
+    width: 100%;
+    height: 30px;
+    border-top: 1px solid #d7f8d0;
+    border-bottom: 1px solid #d7f8d0;
+    background-color: #eaffe6; }
+    .container .header .icon {
+      color: #42b02d;
+      font-size: 14px;
+      margin: 7px 10px 0 5%; }
+    .container .header .hl-font, .container .header .fr .username {
+      display: inline-block;
+      color: #42b02d;
+      height: inherit;
+      line-height: 30px;
+      font-size: 14px; }
+    .container .header .fr {
+      display: inline-block;
+      float: right; }
+      .container .header .fr .exit {
+        font-size: 14px;
+        cursor: pointer;
+        color: #56b1ec;
+        margin: 0 20px 0 100px; }
+
+.content {
+  margin-top: 20px;
+  position: relative; }
+  .content .content-tab {
+    border-bottom: 1px solid #ccc; }
+  .content .table {
+    display: flex;
+    flex-direction: row; }
+    .content .table li {
+      list-style: none;
+      padding: 5px 20px;
+      font-size: 16px;
+      color: #666;
+      cursor: pointer; }
+      .content .table li span {
+        color: red;
+        margin-left: 5px; }
+    .content .table .active {
+      border-top: 1px solid #ccc;
+      border-left: 1px solid #ccc;
+      border-right: 1px solid #ccc;
+      color: #279aed;
+      border-radius: 2px; }
+
+.content-body {
+  height: 500px;
+  width: 100%; }
+  .content-body #table {
+    width: 98%;
+    border: 1px solid #e2e2e2;
+    border-radius: 3px;
+    margin: 0 auto; }
+    .content-body #table tr {
+      height: 40px; }
+    .content-body #table td {
+      text-align: center; }
+      .content-body #table td a {
+        text-decoration: none;
+        color: #56b1ec; }
+
+.page {
+  float: right;
+  margin: 10px 10% 0 0; }
+  .page span {
+    color: #56b1ec; }
+    .page span:nth-child(2) {
+      margin: 0 10px;
+      color: black; }
+  .page .pagechange {
+    cursor: pointer; }
+  .page #current {
+    color: black;
+    margin-right: 5px; }
+  .page #count {
+    margin-left: 5px; }
+
+.content-select {
+  height: 30px;
+  padding: 30px; }
+  .content-select .select-1 {
+    width: 150px;
+    height: 30px;
+    font-size: 16px;
+    color: #666;
+    margin-right: 25px; }
+  .content-select span {
+    color: black;
+    margin-right: 10px; }
+  .content-select .date-input {
+    width: 150px;
+    height: 20px;
+    color: black;
+    font-size: 14px;
+    font-weight: 500; }
+  .content-select .btn, .content-select .btn1 {
+    height: 30px;
+    width: 70px;
+    background-color: #279aed;
+    border: none;
+    border-radius: 3px;
+    color: #FFFFFF;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 20px; }
+  .content-select .btn1 {
+    color: black;
+    background-color: #fff;
+    border: 1px solid #cccccc;
+    margin-right: 10px; }
+
+.min {
+  width: 50px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 2px;
+  font-weight: bold;
+  font-size: 9pt;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  background: #4C8FFB;
+  border: 1px #3079ED solid;
+  box-shadow: inset 0 1px 0 #80B0FB; }
+  .min:hover {
+    border: 1px #2F5BB7 solid;
+    box-shadow: 0 1px 1px #EAEAEA, inset 0 1px 0 #5A94F1;
+    background: #3F83F1; }
+  .min:active {
+    box-shadow: inset 0 2px 5px #2370FE; }
+
+.containerCalcu {
+  width: 225px;
+  height: 319px;
+  background-color: #3B3D37;
+  margin: 100px auto;
+  border-radius: 3px;
+  position: relative; }
+  .containerCalcu .headerCalcu {
+    display: flex;
+    margin-top: 2px; }
+    .containerCalcu .headerCalcu [class*=btn] {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: #fff;
+      margin: 5px 0 0 10px; }
+    .containerCalcu .headerCalcu .btn1 {
+      background-color: #ff5250; }
+    .containerCalcu .headerCalcu .btn2 {
+      background-color: #ffbb41; }
+    .containerCalcu .headerCalcu .btn3 {
+      background-color: #0bc84d; }
+  .containerCalcu .calculate, .containerCalcu .tab {
+    width: 225px;
+    height: 295px;
+    background-color: #3a3b38;
+    margin-top: 5px;
+    border-radius: 0 0 3px 3px;
+    position: absolute; }
+    .containerCalcu .calculate .count, .containerCalcu .tab .count {
+      width: 215px;
+      height: 50px;
+      padding: 0 0 5px 0;
+      color: #FFFFFF;
+      text-align: right;
+      font-size: 45px;
+      font-weight: 200; }
+    .containerCalcu .calculate .key-board, .containerCalcu .tab .key-board {
+      width: 225px;
+      height: 245px;
+      display: flex;
+      flex-wrap: wrap; }
+      .containerCalcu .calculate .key-board [class*=key], .containerCalcu .tab .key-board [class*=key] {
+        box-sizing: content-box;
+        width: 55px;
+        height: 48px;
+        border-bottom: 1px solid #444542;
+        border-right: 1px solid #444542;
+        border-collapse: collapse;
+        font-size: 20px;
+        line-height: 48px;
+        text-align: center;
+        background-color: #747574;
+        color: #FFFFFF;
+        font-weight: 300; }
+        .containerCalcu .calculate .key-board [class*=key]:active, .containerCalcu .tab .key-board [class*=key]:active {
+          background-color: #878887; }
+      .containerCalcu .calculate .key-board .key1, .containerCalcu .tab .key-board .key1, .containerCalcu .calculate .key-board .key5, .containerCalcu .tab .key-board .key5, .containerCalcu .calculate .key-board .key9, .containerCalcu .tab .key-board .key9, .containerCalcu .calculate .key-board .key13, .containerCalcu .tab .key-board .key13, .containerCalcu .calculate .key-board .key17, .containerCalcu .tab .key-board .key17 {
+        border-left: 1px solid #444520; }
+      .containerCalcu .calculate .key-board .key4, .containerCalcu .tab .key-board .key4, .containerCalcu .calculate .key-board .key8, .containerCalcu .tab .key-board .key8, .containerCalcu .calculate .key-board .key12, .containerCalcu .tab .key-board .key12, .containerCalcu .calculate .key-board .key16, .containerCalcu .tab .key-board .key16, .containerCalcu .calculate .key-board .key19, .containerCalcu .tab .key-board .key19 {
+        background-color: #e6a044;
+        font-size: 30px;
+        font-weight: 300; }
+        .containerCalcu .calculate .key-board .key4:active, .containerCalcu .tab .key-board .key4:active, .containerCalcu .calculate .key-board .key8:active, .containerCalcu .tab .key-board .key8:active, .containerCalcu .calculate .key-board .key12:active, .containerCalcu .tab .key-board .key12:active, .containerCalcu .calculate .key-board .key16:active, .containerCalcu .tab .key-board .key16:active, .containerCalcu .calculate .key-board .key19:active, .containerCalcu .tab .key-board .key19:active {
+          background-color: #ffb350; }
+      .containerCalcu .calculate .key-board .key17, .containerCalcu .tab .key-board .key17 {
+        width: 111px;
+        border-radius: 0 0 0 3px; }
+      .containerCalcu .calculate .key-board .key1, .containerCalcu .tab .key-board .key1, .containerCalcu .calculate .key-board .key2, .containerCalcu .tab .key-board .key2, .containerCalcu .calculate .key-board .key3, .containerCalcu .tab .key-board .key3 {
+        background-color: #585858; }
+        .containerCalcu .calculate .key-board .key1:active, .containerCalcu .tab .key-board .key1:active, .containerCalcu .calculate .key-board .key2:active, .containerCalcu .tab .key-board .key2:active, .containerCalcu .calculate .key-board .key3:active, .containerCalcu .tab .key-board .key3:active {
+          background-color: #696969; }
+      .containerCalcu .calculate .key-board .key19, .containerCalcu .tab .key-board .key19 {
+        border-radius: 0 0 3px 0; }
+  .containerCalcu .tab {
+    display: none;
+    z-index: 10; }
+
+/*loading 动画*/
+.loading {
+  width: 200px;
+  height: 200px;
+  margin: 100px auto;
+  position: absolute;
+  top: -25px;
+  left: 10px;
+  animation: test 1s;
+  animation-iteration-count: 2;
+  animation-timing-function: linear; }
+  .loading [class*=item] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    bottom: 0;
+    left: 20px;
+    margin: auto; }
+
+.item-1 {
+  transform: rotate(60deg);
+  transform-origin: -50% -50%;
+  background-color: rgba(60, 63, 65, 0.2); }
+
+.item-2 {
+  transform: rotate(120deg);
+  transform-origin: -50% -50%;
+  background-color: rgba(60, 63, 65, 0.4); }
+
+.item-3 {
+  transform: rotate(180deg);
+  transform-origin: -50% -50%;
+  background-color: rgba(60, 63, 65, 0.6); }
+
+.item-4 {
+  transform: rotate(240deg);
+  transform-origin: -50% -50%;
+  background-color: rgba(60, 63, 65, 0.8); }
+
+.item-5 {
+  transform: rotate(300deg);
+  transform-origin: -50% -50%;
+  background-color: #3c3f41; }
+
+.item-6 {
+  transform: rotate(360deg);
+  transform-origin: -50% -50%;
+  background-color: #3c3f41; }
+
+@keyframes test {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+.history {
+  width: 600px;
+  margin: 100px auto; }
+  .history table {
+    width: 100%;
+    border: 1px solid #e2e2e2;
+    border-radius: 3px;
+    margin: 0 auto; }
+    .history table thead {
+      background-color: #d7d7d7;
+      font-weight: 400; }
+    .history table tr {
+      height: 40px;
+      width: 100px; }
+    .history table td {
+      text-align: center;
+      width: 150px; }
+
+/*# sourceMappingURL=index.css.map */
