@@ -24,9 +24,7 @@ export default class History extends Component {
     getData = () => {
         fetch('http://localhost:8080/Calcu/getData.php', {
             method: 'get',
-            /* headers: new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' }),
-            body: new URLSearchParams(params).toString(), */
-        }).then((res) => res.json()).then((res) => {
+        }).then(res => res.json()).then((res) => {
             this.setState({ data: res });
         });
     };
@@ -40,20 +38,20 @@ export default class History extends Component {
             <div className="history">
                 <table>
                     <thead>
-                    <tr>
-                        <th>输入</th>
-                        <th>输出</th>
-                    </tr>
+                        <tr>
+                            <th>输入</th>
+                            <th>输出</th>
+                        </tr>
                     </thead>
                     <tbody>
-                    {
-                        data.map((item) => (
-                            <tr key={item.id}>
-                                <td>{item.import}</td>
-                                <td>{item.export}</td>
-                            </tr>
-                        ))
-                    }
+                        {
+                            data.map(item => (
+                                <tr key={item.id}>
+                                    <td>{item.import}</td>
+                                    <td>{item.export}</td>
+                                </tr>
+                            ))
+                        }
                     </tbody>
                 </table>
             </div>
