@@ -7,7 +7,6 @@ import { getData } from './action';
  * 历史记录组件
  */
 class History extends Component {
-
     /**
      * 组件挂载完成时请求数据
      */
