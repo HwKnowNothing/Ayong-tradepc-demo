@@ -67,16 +67,13 @@ class Calcu extends Component {
      */
     render() {
         const keyArr = ['AC', '+/-', '%', '÷', '7', '8', '9', '×', '4', '5', '6', '-', '1', '2', '3', '+', '0', '.', '='];
-        const { isNone, isShow, textBox } = this.props;
+        const { isShow, textBox } = this.props;
         return (
             <div>
-                <div className="min" style={{ display: !isNone ? 'none' : 'block' }} onClick={this.showCalcu}>
-                    计算器
-                </div>
-                <div className="containerCalcu" style={{ display: isNone ? 'none' : 'block' }}>
+                <div className="containerCalcu">
                     <div className="headerCalcu">
                         <div className="btn1" />
-                        <div className="btn2" onClick={this.showCalcu} />
+                        <div className="btn2" />
                         <div className="btn3" />
                     </div>
                     <div className="calculate" id="calue">
